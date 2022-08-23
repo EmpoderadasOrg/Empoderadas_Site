@@ -1,0 +1,18 @@
+.primeira-header{
+    background-color: orange;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.link-header{
+    color: black;
+}
+
+.dropdown-item , .nav-link{
+    color: black;
+}
