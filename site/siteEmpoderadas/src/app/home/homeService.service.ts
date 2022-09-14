@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Produtos } from '../models/produtos';
+import { Artistas } from '../models/Artistas';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +12,10 @@ export class HomeServiceService {
 constructor(private Http : HttpClient) { }
 
 getProdutos(): Observable<Produtos[]>{
-  return this.Http.get<Produtos[]>('http://henriqu3-001-site1.itempurl.com/Api/GetProdutos');
+  return this.Http.get<Produtos[]>('http://empoderadas.softadworks.com/admin/Api/GetProdutos');
 }
 
+getArtistas(): Observable<Artistas[]>{
+  return this.Http.get<Artistas[]>('http://empoderadas.softadworks.com/admin/Api/GetUsuarios');
+}
 }

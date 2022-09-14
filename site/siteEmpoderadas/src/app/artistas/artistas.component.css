@@ -119,6 +119,28 @@ h2{
     color: white;
 }
 
+.produtoCard{
+    margin-top:5%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    text-align: start;
+    margin-left: 8%;
+}
+
+.produtoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.produtoCard:hover{
+    cursor: pointer;
+}
+
 
 .texto-center{
     text-align: center;
@@ -207,11 +229,11 @@ footer{
     display: flex;
     position: absolute;
     background-color: #58534f;
-    margin-top: 370vh;
+    margin-top: 100vh;
     align-items: center;
     text-align: start;
     justify-content: center;
-    width: 98.7vw;
+    width: 100%;
 }
 
 .sobre , .contato , .novidades{
@@ -270,4 +292,11 @@ cursor: default !important;
     cursor: pointer;
     height: 45px;
     margin-left: 1.1%;
+}
+
+
+@media  screen and (max-width: 768px) {
+    .footerMobile{
+        display: none;
+    }
 }

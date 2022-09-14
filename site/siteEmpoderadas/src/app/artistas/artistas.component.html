@@ -1,105 +1,54 @@
-<nav>
-  <div class="primeira-header" style="background-color: orange;">
-    <a class="link-header" href="">Sales of Lorem ipsum dolor sit.</a>
+<nav class="navbar bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="home">
+      <img width="20" src="https://cdn.shopify.com/s/files/1/0080/5365/3540/files/TOM_amarelo_140x.png?v=1558379646" alt="">
+    </a>
   </div>
 </nav>
 
-<header style="margin-bottom: 280px;" class="bg-primary">
-  <section class="navegacao">
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="https://cdn.shopify.com/s/files/1/0080/5365/3540/files/TOM_amarelo_140x.png?v=1558379646" alt="erro">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Peças
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Colares</a></li>
-                <li><a class="dropdown-item" href="#">Brincos</a></li>
-                <li><a class="dropdown-item" href="#">Sapatos</a></li>
-              </ul>
-            </li>
-    
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Artistas
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Michele Jailson</a></li>
-                <li><a class="dropdown-item" href="#">Bruna marisa</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Estilos
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Michele Jailson</a></li>
-                <li><a class="dropdown-item" href="#">Bruna marisa</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </section>
-</header>
-
 <main>
   <section>
-  </section>
-
-  <section class="listagem-produtos">
-    <div class="texto-center">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni libero fugit commodi ipsum quis dolore?.</p>
+    <div>
+      <article class="center text-center mt-3">
+        <img style="border: 2px solid white; border-radius: 10px; width: 400px !important;" src="https://th.bing.com/th/id/OIP.rYfGx1AonbxyXmx6nW-SeAHaHm?pid=ImgDet&rs=1" alt="">
+      </article>
     </div>
   </section>
 
-  <section class="area-sale">
-    <div class="card-produto">
-
-    </div>
-
-    <div class="card-produto">
-
-    </div>
-
-    <div class="card-produto">
-
-    </div>
-
-    <div class="card-produto">
-
-    </div>
-
-    <div class="card-produto">
-
-    </div>
-
-    <div class="card-produto">
-
-    </div>
-
-    <div class="card-produto">
-
-    </div>
-
-    <div class="card-produto">
-
+  <section>
+    <div style="display: flex;align-items:center; justify-content: center;" class="text-center center mt-5">
+    <h3 style="max-width: 1000px;">{{artistas.descricao}}</h3>
     </div>
   </section>
+
+
+  <section style="display: flex; flex-wrap: wrap;">
+    <div class="produtoCard">
+      <article>
+        <img style="width: 320px !important; flex-wrap: wrap;" width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
+        <h5 style="    font-size: 20px;
+        color: white;
+        font-weight: 400;">teste</h5>
+        <div class="row ml-0 produtoDiv">
+          <h5 style="color: white;
+          font-size: 15px;" class="mr-0">teste</h5>
+
+          <h5 style="color: white;
+          font-size: 15px;">teste</h5>
+        </div>
+      </article>
+      
+    </div>
+
+    
+
+    
+  </section>
+
 </main>
 
 
-<footer>
+<footer class="footerMobile">
   <section class="sobre">
     <p>Sobre</p>
     <span>______________________</span>
@@ -112,15 +61,5 @@
     <p>Contato</p>
     <span>______________________</span>
     <a href="">email@email.com</a>
-  </section>
-
-  <section class="novidades">
-    <p>Novidades da TOM</p>
-    <span>______________________</span>
-    <p>Receba as novidades por E-mail:</p>
-    <form class="novidadesmail">
-      <input type="email" class="btn">
-      <button type="submit" class="receber-btn">RECEBER</button>
-    </form>
   </section>
 </footer>

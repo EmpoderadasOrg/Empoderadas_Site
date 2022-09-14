@@ -116,6 +116,54 @@
     font-size: 16px;
 }
 
+.novidadesemail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    flex-direction: row;
+    width: 200px;
+}
+.receber-btn{
+    text-align: center;
+    background-color: transparent;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: orange;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 2px;
+    color: #58534f;
+    position: inherit;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 45px;
+    margin-left: 1.1%;
+}
+
+footer{
+    border-top: .15px solid #cfd0d480;
+    height: 25vh;
+    display: flex;
+    position: absolute;
+    background-color: #58534f;
+    margin-top: 30vh;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+    width: 98.7vw;
+}
+
+.sobre , .contato , .novidades{
+    display: flex;
+    align-self: center;
+    width: 500px;
+    flex-direction: column;
+    margin-left: 5%;
+    color: #cfd0d4 !important;
+}
+
 @media screen and (min-width: 768px) {
     .navbar-nav{
         margin-top: 10%;

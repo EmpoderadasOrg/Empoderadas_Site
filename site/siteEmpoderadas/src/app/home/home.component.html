@@ -14,17 +14,13 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Peças</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Artistas</a>
-          </li>
           
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Produtos
+              Artistas
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Colares</a></li>
-              <li><a class="dropdown-item" href="#">Brincos</a></li>
+              <li *ngFor="let artista of artistas"><a class="dropdown-item" href="artistas/{{artista.id}}">{{artista.nome}}</a></li>
             </ul>
           </li>
 
@@ -80,69 +76,18 @@
 
 
   <section class="area-produto">
-    <div class="produtoCard">
+    <div *ngFor="let produto of produtos" class="produtoCard">
       <article>
         <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
         <h5 style="    font-size: 20px;
         color: white;
-        font-weight: 400;">Boné Oakley</h5>
+        font-weight: 400;">{{produto.nome}}</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
+          font-size: 15px;" class="mr-0">{{produto.nome}}</h5>
 
           <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
-        </div>
-      </article>
-      
-    </div>
-
-    <div class="produtoCard">
-      <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
-        <h5 style="    font-size: 20px;
-        color: white;
-        font-weight: 400;">Boné Oakley</h5>
-        <div class="row ml-0 produtoDiv">
-          <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
-
-          <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
-        </div>
-      </article>
-      
-    </div>
-
-    <div class="produtoCard">
-      <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
-        <h5 style="    font-size: 20px;
-        color: white;
-        font-weight: 400;">Boné Oakley</h5>
-        <div class="row ml-0 produtoDiv">
-          <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
-
-          <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
-        </div>
-      </article>
-      
-    </div>
-
-    <div class="produtoCard">
-      <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
-        <h5 style="    font-size: 20px;
-        color: white;
-        font-weight: 400;">Boné Oakley</h5>
-        <div class="row ml-0 produtoDiv">
-          <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
-
-          <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
+          font-size: 15px;">{{produto.valor}}R$</h5>
         </div>
       </article>
       
@@ -158,7 +103,7 @@
         <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
         <h5 style="    font-size: 20px;
         color: white;
-        font-weight: 400;">Boné Oakley</h5>
+        font-weight: 400;">produtos</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
           font-size: 15px;" class="mr-0">Oakley</h5>
@@ -217,35 +162,18 @@
   <div class="area-produto-mobile">
     <h1 style="font-size: 15px !important;
     margin-left: 19px; color: white;">Produtos em Destaques</h1>
-    <div class="produtoCard-mobile">
+    <div *ngFor="let produto of produtos" class="produtoCard-mobile">
       <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
+        <img width="100%" src={{produto.pathFotoPrimaria}} alt="">
         <h5 style="    font-size: 20px;
         color: white;
-        font-weight: 400;">Boné Oakley</h5>
+        font-weight: 400;">{{produto.nome}}</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
+          font-size: 15px;" class="mr-0">{{produto.nome}}</h5>
 
           <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
-        </div>
-      </article>
-      
-    </div>
-
-    <div class="produtoCard-mobile">
-      <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
-        <h5 style="    font-size: 20px;
-        color: white;
-        font-weight: 400;">Boné Oakley</h5>
-        <div class="row ml-0 produtoDiv">
-          <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
-
-          <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
+          font-size: 15px;">{{produto.valor}}R$</h5>
         </div>
       </article>
       
@@ -253,3 +181,19 @@
 
   </div>
 </div>
+
+<footer>
+  <section class="sobre">
+    <p>Sobre</p>
+    <span>______________________</span>
+    <a href="">a TOM</a>
+    <a href="">Termos e Condições</a>
+    <a href="">Privacidade</a>
+  </section>
+
+  <section class="contato">
+    <p>Contato</p>
+    <span>______________________</span>
+    <a href="">email@email.com</a>
+  </section>
+</footer>
