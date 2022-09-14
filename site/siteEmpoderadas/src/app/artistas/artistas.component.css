@@ -129,6 +129,7 @@ h2{
     justify-content: center;
     text-align: start;
     margin-left: 8%;
+    margin-bottom: 7%;
 }
 
 .produtoDiv{
@@ -229,7 +230,7 @@ footer{
     display: flex;
     position: absolute;
     background-color: #58534f;
-    margin-top: 100vh;
+    margin-top: 30vh;
     align-items: center;
     text-align: start;
     justify-content: center;
@@ -298,5 +299,9 @@ cursor: default !important;
 @media  screen and (max-width: 768px) {
     .footerMobile{
         display: none;
+    }
+
+    img{
+        max-width: 80%;
     }
 }

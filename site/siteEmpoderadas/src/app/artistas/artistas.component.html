@@ -10,7 +10,7 @@
   <section>
     <div>
       <article class="center text-center mt-3">
-        <img style="border: 2px solid white; border-radius: 10px; width: 400px !important;" src="https://th.bing.com/th/id/OIP.rYfGx1AonbxyXmx6nW-SeAHaHm?pid=ImgDet&rs=1" alt="">
+        <img style="border: 2px solid white; border-radius: 10px; width: 400px !important;" src={{artistas.pathFotoPerfil}} alt="">
       </article>
     </div>
   </section>
@@ -23,18 +23,18 @@
 
 
   <section style="display: flex; flex-wrap: wrap;">
-    <div class="produtoCard">
+    <div *ngFor="let produto of produtos" class="produtoCard">
       <article>
-        <img style="width: 320px !important; flex-wrap: wrap;" width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
+        <img style="width: 320px !important; flex-wrap: wrap; border-radius: 10px;" width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
         <h5 style="    font-size: 20px;
         color: white;
-        font-weight: 400;">teste</h5>
+        font-weight: 400;">{{produto.nome}}</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
-          font-size: 15px;" class="mr-0">teste</h5>
+          font-size: 15px;" class="mr-0">{{produto.valor}}</h5>
 
           <h5 style="color: white;
-          font-size: 15px;">teste</h5>
+          font-size: 15px;">{{produto.valor}}$</h5>
         </div>
       </article>
       
