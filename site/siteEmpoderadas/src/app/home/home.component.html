@@ -89,7 +89,7 @@
         font-weight: 400;">{{produto.nome}}</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
-          font-size: 15px;" class="mr-0">{{produto.artista}}</h5>
+          font-size: 15px;" class="mr-0">{{produto.usuario}}</h5>
 
           <h5 style="color: white;
           font-size: 15px;">{{produto.valor}}R$</h5>
@@ -110,7 +110,7 @@
   <div class="area-produto-mobile">
     <h1 style="font-size: 15px !important;
     margin-left: 19px; color: white;">Produtos em Destaques</h1>
-    <div *ngFor="let produto of produtos" class="produtoCard-mobile">
+    <div (click)="redirecionarShoope(produto.linkShoppe)" *ngFor="let produto of produtos" class="produtoCard-mobile">
       <article>
         <img width="100%" src={{produto.pathFotoPrimaria}} alt="">
         <h5 style="    font-size: 20px;
@@ -118,7 +118,7 @@
         font-weight: 400;">{{produto.nome}}</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
-          font-size: 15px;" class="mr-0">{{produto.artista}}</h5>
+          font-size: 15px;" class="mr-0">{{produto.usuario}}</h5>
 
           <h5 style="color: white;
           font-size: 15px;">{{produto.valor}}R$</h5>

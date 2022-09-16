@@ -73,6 +73,10 @@
 
 .produtoCard-mobile{
     margin-left: 10%;
+    margin-bottom: 10%;
+    border: 2px solid white;
+    padding: 18px;
+    border-radius: 10px;
 }
 
 .teste{

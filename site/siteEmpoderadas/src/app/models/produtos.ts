@@ -8,4 +8,5 @@ export class Produtos {
     pathFotoSecundaria : string;
     artista : string;
     idCategoria : number;
+    usuario : string;
 }

@@ -47,4 +47,9 @@ export class ArtistasComponent implements OnInit {
     )
   };
 
+  redirecionarShoope(linkUrl : string){
+    var win = window.open(linkUrl, '_blank');
+    win?.focus();
+  }
+
 }

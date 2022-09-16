@@ -9,6 +9,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { TermosComponent } from './termos/termos.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'pecas', component: PecasComponent},
   {path: 'home', component: HomeComponent},
   {path: '', component: HomeComponent},
