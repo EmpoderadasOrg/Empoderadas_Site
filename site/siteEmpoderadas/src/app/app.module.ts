@@ -8,13 +8,21 @@ import { HomeComponent } from './home/home.component';
 import { ArtistasComponent } from './artistas/artistas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { PrivacidadeComponent } from './privacidade/privacidade.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { TermosComponent } from './termos/termos.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [							
     AppComponent,
       PecasComponent,
       HomeComponent,
-      ArtistasComponent
+      ArtistasComponent,
+      CategoriaComponent,
+      PrivacidadeComponent,
+      SobreComponent,
+      TermosComponent
    ],
   imports: [
     BrowserModule,

@@ -11,8 +11,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Peças</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let categoria of categorias"><a class="dropdown-item" href="categoria/{{categoria.id}}">{{categoria.nome}}</a></li>
+            </ul>
           </li>
           
           <li class="nav-item dropdown">
@@ -25,7 +30,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
+            <a class="nav-link" href="/sobre">Sobre</a>
           </li>
 
         </ul>
@@ -76,15 +81,15 @@
 
 
   <section class="area-produto">
-    <div *ngFor="let produto of produtos" class="produtoCard">
+    <div *ngFor="let produto of produtos" class="produtoCard" (click)="redirecionarShoope(produto.linkShoppe)">
       <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
+        <img width="100%" src={{produto.pathFotoPrimaria}} alt="">
         <h5 style="    font-size: 20px;
         color: white;
         font-weight: 400;">{{produto.nome}}</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
-          font-size: 15px;" class="mr-0">{{produto.nome}}</h5>
+          font-size: 15px;" class="mr-0">{{produto.artista}}</h5>
 
           <h5 style="color: white;
           font-size: 15px;">{{produto.valor}}R$</h5>
@@ -92,63 +97,6 @@
       </article>
       
     </div>
-  </section>
-  <hr style="margin-top: 5%;
-  width: 100%; border-color:#ba62c5 !important;" class="border border-danger border-2 opacity-50">
-  <h2 style="color: rgb(218, 213, 213);
-  font-size: 30px; margin-left: 7.9%;">Produtos na promoção</h2>
-  <section class="area-produto">
-    <div class="produtoCard teste">
-      <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
-        <h5 style="    font-size: 20px;
-        color: white;
-        font-weight: 400;">produtos</h5>
-        <div class="row ml-0 produtoDiv">
-          <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
-
-          <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
-        </div>
-      </article>
-      
-    </div>
-    
-    <div class="produtoCard teste">
-      <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
-        <h5 style="    font-size: 20px;
-        color: white;
-        font-weight: 400;">Boné Oakley</h5>
-        <div class="row ml-0 produtoDiv">
-          <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
-
-          <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
-        </div>
-      </article>
-      
-    </div>
-
-    <div class="produtoCard teste">
-      <article>
-        <img width="100%" src="https://th.bing.com/th/id/OIP.lfSxqgtv9QnQem8h42BWfgHaHa?pid=ImgDet&rs=1" alt="">
-        <h5 style="    font-size: 20px;
-        color: white;
-        font-weight: 400;">Boné Oakley</h5>
-        <div class="row ml-0 produtoDiv">
-          <h5 style="color: white;
-          font-size: 15px;" class="mr-0">Oakley</h5>
-
-          <h5 style="color: white;
-          font-size: 15px;">159,00R$</h5>
-        </div>
-      </article>
-      
-    </div>
-
   </section>
 
 </div>
@@ -170,7 +118,7 @@
         font-weight: 400;">{{produto.nome}}</h5>
         <div class="row ml-0 produtoDiv">
           <h5 style="color: white;
-          font-size: 15px;" class="mr-0">{{produto.nome}}</h5>
+          font-size: 15px;" class="mr-0">{{produto.artista}}</h5>
 
           <h5 style="color: white;
           font-size: 15px;">{{produto.valor}}R$</h5>
@@ -186,14 +134,14 @@
   <section class="sobre">
     <p>Sobre</p>
     <span>______________________</span>
-    <a href="">a TOM</a>
-    <a href="">Termos e Condições</a>
-    <a href="">Privacidade</a>
+    <a class="linkFooter" href="/sobre">a TOM</a>
+    <a class="linkFooter" href="/termos">Termos e Condições</a>
+    <a class="linkFooter" href="/privacidade">Privacidade</a>
   </section>
 
   <section class="contato">
     <p>Contato</p>
     <span>______________________</span>
-    <a href="">email@email.com</a>
+    <a>email@email.com</a>
   </section>
 </footer>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Artistas } from '../models/Artistas';
+import { Categorias } from '../models/Categorias';
 import { Produtos } from '../models/produtos';
 import { HomeServiceService } from './homeService.service';
 
@@ -13,10 +14,12 @@ export class HomeComponent implements OnInit {
   constructor(private service : HomeServiceService) { }
 
   public produtos : Produtos[];
+  public categorias : Categorias[];
   public artistas : Artistas[];
   ngOnInit() {
     this.carregarProdutos();
     this.carregarArtistas();
+    this.carregarCategorias();
   }
 
   carregarProdutos(){
@@ -42,4 +45,23 @@ export class HomeComponent implements OnInit {
       }
     )
   };
+
+
+  carregarCategorias(){
+    this.service.getCategorias().subscribe(
+      (categorias : Categorias[])=> {
+        this.categorias = categorias;
+        console.log(this.categorias);
+      },
+      (erro: any) =>{
+        console.error(erro);
+      }
+    )
+  };
+
+
+  redirecionarShoope(linkUrl : string){
+    var win = window.open(linkUrl, '_blank');
+    win?.focus();
+  }
 }

@@ -6,5 +6,6 @@ export class Produtos {
     linkShoppe : string;
     pathFotoPrimaria : string;
     pathFotoSecundaria : string;
+    artista : string;
     idCategoria : number;
 }

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Produtos } from '../models/produtos';
 import { Artistas } from '../models/Artistas';
+import { Categorias } from '../models/Categorias';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,4 +19,10 @@ getProdutos(): Observable<Produtos[]>{
 getArtistas(): Observable<Artistas[]>{
   return this.Http.get<Artistas[]>('http://empoderadas.softadworks.com/admin/Api/GetUsuarios');
 }
+
+
+getCategorias(): Observable<Categorias[]>{
+  return this.Http.get<Categorias[]>('http://empoderadas.softadworks.com/admin/Api/GetCategorias');
+}
+
 }
