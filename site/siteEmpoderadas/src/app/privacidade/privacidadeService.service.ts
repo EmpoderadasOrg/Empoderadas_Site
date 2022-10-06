@@ -1,20 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { Produtos } from '../models/produtos';
 import { Artistas } from '../models/Artistas';
 import { Categorias } from '../models/Categorias';
+import { Termos } from '../models/Termos';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeServiceService {
+export class PrivacidadeService {
 
 constructor(private Http : HttpClient) { }
-
-getProdutos(): Observable<Produtos[]>{
-  return this.Http.get<Produtos[]>('https://empoderadas.softadworks.com/admin/Api/GetProdutos');
-}
 
 getArtistas(): Observable<Artistas[]>{
   return this.Http.get<Artistas[]>('https://empoderadas.softadworks.com/admin/Api/GetUsuarios');
@@ -23,6 +18,10 @@ getArtistas(): Observable<Artistas[]>{
 
 getCategorias(): Observable<Categorias[]>{
   return this.Http.get<Categorias[]>('https://empoderadas.softadworks.com/admin/Api/GetCategorias');
+}
+
+getPrivacidade(): Observable<Termos>{
+    return this.Http.get<Termos>('https://empoderadas.softadworks.com/admin/Api/GetPrivacidade');
 }
 
 }

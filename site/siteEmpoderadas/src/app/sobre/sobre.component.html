@@ -1,34 +1,129 @@
-<nav class="navbar bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="home">
-      <img width="20" src="https://cdn.shopify.com/s/files/1/0080/5365/3540/files/TOM_amarelo_140x.png?v=1558379646" alt="">
-    </a>
-  </div>
-</nav>
-
-<main>
-
-  <section>
-    <div style="display: flex;align-items:center; justify-content: center;" class="text-center center mt-5">
-    <h3 style="max-width: 1000px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptatum consectetur facilis voluptates reprehenderit ipsa?</h3>
-    </div>
-  </section>
-
-</main>
 
 
-<footer class="footerMobile">
-  <section class="sobre">
-    <p>Sobre</p>
-    <span>______________________</span>
-    <a href="/sobre">a TOM</a>
-    <a href="/termos">Termos e Condições</a>
-    <a href="/privacidade">Privacidade</a>
-  </section>
+<div class="divCarr">
+  <header class="header-principal">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="background-color: #a716d7 !important;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home">
+          <img width="150" src="https://empoderadas.softadworks.com/admin/images/EmpoderadasLogo.png" >
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let categoria of categorias"><a class="dropdown-item" href="categoria/{{categoria.id}}">{{categoria.nome}}</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Artistas
+              </a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let artista of artistas"><a class="dropdown-item" href="artistas/{{artista.id}}">{{artista.nome}}</a></li>
+              </ul>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="/sobre">Sobre</a>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <section class="contato">
-    <p>Contato</p>
-    <span>______________________</span>
-    <a href="">email@email.com</a>
-  </section>
-</footer>
+  <main class="termos">
+    <h2 style="font-weight: bold;">Sobre a Empoderadas</h2>
+    <section>
+      <div>
+        <p>{{sobre}}</p>
+      </div>
+    </section>
+  
+  </main>
+
+  <footer>
+    <section class="sobre">
+      <h3>Sobre</h3>
+      <a class="linkFooter" href="/sobre">Empoderadas</a>
+      <a class="linkFooter" href="/termos">Termos e Condições</a>
+      <a class="linkFooter" href="/privacidade">Privacidade</a>
+    </section>
+  
+    <section class="contato">
+      <h3>Contato</h3>
+      <a>Empoderadas.produtos@gmail.com</a>
+    </section>
+  </footer>
+</div>
+
+<div class="mobile">
+  <header class="header-principal-mobile">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="background-color: #a716d7 !important;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home">
+          <img src="https://empoderadas.softadworks.com/admin/images/EmpoderadasLogo.png" >
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav-mobile" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav-mobile">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let categoria of categorias"><a class="dropdown-item" href="categoria/{{categoria.id}}">{{categoria.nome}}</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Artistas
+              </a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let artista of artistas"><a class="dropdown-item" href="artistas/{{artista.id}}">{{artista.nome}}</a></li>
+              </ul>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/sobre">Sobre</a>
+            </li>
+  
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="termos-mobile">
+    <h2 style="font-weight: bold !important;">Sobre a Empoderadas</h2>
+    <section>
+      <div>
+        <p>{{sobre}}</p>
+      </div>
+    </section>
+  
+  </main>
+
+  <footer class="flex-container">
+    <section class="flex-container-section">
+      <h3>Sobre</h3>
+      <a class="text-light" href="/sobre">Empoderadas</a>
+      <a class="text-light" href="/termos">Termos e Condições</a>
+      <a class="text-light" href="/privacidade">Privacidade</a>
+      <br>
+      <h3>Contato</h3>
+      <a class="text-light">Empoderadas.produtos@gmail.com</a>
+    </section>
+  </footer>
+</div>
+

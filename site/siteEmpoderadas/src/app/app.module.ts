@@ -12,6 +12,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { PrivacidadeComponent } from './privacidade/privacidade.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { TermosComponent } from './termos/termos.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [							
@@ -30,7 +31,9 @@ import { TermosComponent } from './termos/termos.component';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: PathLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

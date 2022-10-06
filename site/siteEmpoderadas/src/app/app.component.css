@@ -18,6 +18,12 @@
     color: black;
 }
 
+.header-principal{
+    background-color: #58534f;
+    height: 15vh;
+    width: 100vw;
+}
+
 
 .navbar{
     background-color: #58534f !important;

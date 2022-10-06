@@ -15,6 +15,10 @@
     width: 100vw;
 }
 
+.navbar-brand-mobile{
+    width: 20vw !important;
+}
+
 
 .logo{
     margin-left: 10%;
@@ -62,21 +66,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.area-produto-mobile{
-    width: 220px;
-    margin-left: 15%;
-    margin-top: 5%;
-    flex-direction: column;
-}
-
-.produtoCard-mobile{
-    margin-left: 10%;
-    margin-bottom: 10%;
-    border: 2px solid white;
-    padding: 18px;
-    border-radius: 10px;
 }
 
 .teste{
@@ -175,6 +164,68 @@ footer{
 .linkFooter:hover{
     color: orange;
     transition: 0.2s all;
+}
+
+.carroselImagem{
+    position: relative;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 20vh;
+    min-height: 50vh;
+}
+
+.area-produto-mobile{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 5%;
+    flex-direction: column;
+}
+
+.produtoCard-mobile{
+    margin-left: 5vw;
+    margin-bottom: 10%;
+    border: 2px solid white;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.carroselImagem-mobile{
+    margin-left: 25vw;
+    width: 50vw;
+    height: 15vh;
+    margin-top: 2.5vh;
+}
+#carouselExampleSlidesOnly-mobile{
+    margin-top: 25vh;
+    height: 20vh;
+    display: flex;
+}
+
+.header-principal-mobile{
+    background-color: #58534f;
+    margin-top: 0% !important;
+    height: 10vh;
+    width: 100vw;
+}
+
+#navbarNav-mobile{
+    position: fixed !important;
+    margin-top: 30vh;
+    width: 85vw;
+    margin-left: 0vw;
+    background-color: grey;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.flex-container-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
